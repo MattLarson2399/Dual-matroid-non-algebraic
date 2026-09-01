@@ -5,7 +5,7 @@ Using Zvi Rosen's code available [here](https://github.com/zvihr/algebraic-matro
 ```
 M2 computebases.M2
 ```
-in this directory on a machine in Macaulay2 installed, then it will essentially instantaneously output a list of nonbases of algebraic matroid N. 
+in this directory on a machine in Macaulay2 installed, then it will essentially instantaneously output a list of nonbases of algebraic matroid $\mathrm{N}$. 
 ```
 nonbases: 20
 {X , X , X , X , X , X }
@@ -49,8 +49,12 @@ nonbases: 20
 {X , X , X , X , X , X  }
   5   6   7   8   9   10
 ```
-We now describe how to check that the matroid dual of N fails the Ingleton-Main extension property at depth 7. For this, we use [code](https://github.com/bmilosh/algebraic-matroids-extensions) written by Bamiloshin and Farràs, based on the paper [Optimizing extension techniques for discovering non-algebraic matroids](https://arxiv.org/abs/2406.18359v2). Running
+We now describe how to check that $N^*$ fails the Ingleton-Main extension property at depth 7. For this, we use [code](https://github.com/bmilosh/algebraic-matroids-extensions) written by Bamiloshin and Farràs, based on the paper [Optimizing extension techniques for discovering non-algebraic matroids](https://arxiv.org/abs/2406.18359v2). Running
 ```
 sage check_DL.py
 ```
 in this directory on a machine with Sage installed checks that the dual of N fails the Ingleton-Main extension property at depth 7. This took 2 hours and 25 minutes on a laptop with a 12th Gen Intel Core i7-1250U chip. 
+
+The code written by Bamiloshin and Farràs is highly optimized. This is makes it somewhat involved to inspect and verify the correctness. As part of his [thesis](https://pure.tue.nl/ws/files/110949529/20181207_Bollen.pdf), Bollen wrote very simple [code](https://github.com/gpbollen/Algebraicity-of-Matroids-and-Frobenius-Flocks) to check the Ingleton-Main extension property. It is not practical to use this code to check that the dual of N fails the Ingleton-Main condition at depth 7. 
+
+We have written a short program which, as described in the paper, does the first three steps of the proof that the dual of N does not satisfy the Ingleton-Main 
