@@ -1,7 +1,7 @@
 # Dual-matroid-non-algebraic
 This file contains code to accompany the paper "Duals of algebraic matroids need not be algebraic" by Matt Larson and Tuong Le. 
 
-Using Zvi Rosen's code available [here](), which is based on the paper ["Computing algebraic matroids"](https://arxiv.org/abs/1403.8148), one can verify the description of the algebraic matroid N in the paper. If one runs
+Using Zvi Rosen's code available [here](https://github.com/zvihr/algebraic-matroids), which is based on the paper ["Computing algebraic matroids"](https://arxiv.org/abs/1403.8148), one can verify the description of the algebraic matroid N in the paper. If one runs
 ```
 M2 computebases.M2
 ```
