@@ -53,4 +53,4 @@ We now describe how to check that the matroid dual of N fails the Ingleton-Main 
 ```
 sage check_DL.py
 ```
-in this directory checks that the dual of N fails the Ingleton-Main extension property at depth 7. This took 2 hours and 25 minutes on a laptop with a 12th Gen Intel Core i7-1250U chip. 
+in this directory on a machine with Sage installed checks that the dual of N fails the Ingleton-Main extension property at depth 7. This took 2 hours and 25 minutes on a laptop with a 12th Gen Intel Core i7-1250U chip. 
