@@ -3,7 +3,7 @@ This file contains code to accompany the paper "Duals of algebraic matroids need
 
 Using Zvi Rosen's code available [here](https://github.com/zvihr/algebraic-matroids), which is based on the paper ["Computing algebraic matroids"](https://arxiv.org/abs/1403.8148), one can verify the description of the algebraic matroid $\mathrm{N}$ in the paper. If one runs
 ```
-M2 computebases.M2
+M2 --script computebases.M2
 ```
 in this directory on a machine in Macaulay2 installed, then it will essentially instantaneously output a list of nonbases of algebraic matroid $\mathrm{N}$. 
 ```
@@ -57,9 +57,9 @@ in this directory on a machine with Sage installed checks that $\mathrm{N}^*$ fa
 
 The code written by Bamiloshin and Farràs is highly optimized. This makes it somewhat involved to inspect and verify the correctness the correctness of this code. As part of his [thesis](https://pure.tue.nl/ws/files/110949529/20181207_Bollen.pdf), Bollen wrote very simple [code](https://github.com/gpbollen/Algebraicity-of-Matroids-and-Frobenius-Flocks) to check the Ingleton-Main extension property. However, it is not practical to use his code to check that $\mathrm{N}^*$ fails the Ingleton-Main condition at depth 7. 
 
-We have written a short program which, as described in the paper, does the first three steps of the proof that $\mathrm{N}^*$ does not satisfy the Ingleton-Main extension property. This reduces the verification to checking that three matroids $\mathrm{C}_1$, $\mathrm{C}_2$, and $\mathrm{C}_3$ on $[13]$ do not satisfies the Ingleton-Main extension property at depth 4. We use a version of Bollen's code to check this; this takes 1 hour and 51 minutes for $\mathrm{C}_1$, 1 hour and 36 minutes for $\mathrm{C}_2$, and 1 hours and 11 minutes for $\mathrm{C}_3$. This code can be run using
-
+We have written SageMath notebook which, as described in the paper, explicitly does the first three steps of the proof that $\mathrm{N}^*$ does not satisfy the Ingleton-Main extension property. This reduces the verification to checking that three matroids $\mathrm{C}_1$, $\mathrm{C}_2$, and $\mathrm{C}_3$ on $[13]$ do not satisfies the Ingleton-Main extension property at depth 4. The notebook then use a version of Bollen's code to check this; this takes 1 hour and 51 minutes for $\mathrm{C}_1$, 1 hour and 36 minutes for $\mathrm{C}_2$, and 1 hours and 11 minutes for $\mathrm{C}_3$. This code is in 
+`first_3_steps.ipynb` and should be run with a SageMath kernel. Running
 ```
-sage bollenIM.py
+sage -n jupyter first_3_steps.ipynb
 ```
-in this directory on a machine with Sage installed. 
+in this directory on a machine with Sage installed will open up an interactive notebook where the user can see each step of the computation.
