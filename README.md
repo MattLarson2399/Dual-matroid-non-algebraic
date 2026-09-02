@@ -62,4 +62,4 @@ We have written a SageMath notebook which, as described in the paper, explicitly
 ```
 sage -n jupyter explicit_proof.ipynb
 ```
-in this directory on a machine with Sage installed will open up an interactive notebook where the user can see each step of the computation.
+in this directory on a machine with SageMath installed will open up an interactive notebook where the user can see each step of the computation.
